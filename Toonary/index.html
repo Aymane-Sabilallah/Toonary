@@ -38,12 +38,7 @@
     <div class="container">
         <header>
             <img src="https://i.postimg.cc/kXDxZ8vh/1.png" alt="Toonary Logo" class="logo">
-           <div class="countdown-container">
-        <div class="countdown-circle">
-            <div class="countdown" id="countdown">5</div>
-        </div>
-        <h2 >اعلان</h2>
-    </div>
+      
             <h1>Toonary</h1>
             <p class="subtitle">شاهد جميع أفلام ومسلسلات الإنميشن مجاناً وبدون حدود للمشاهدة (متوفر فقط للأندرويد)</p>
             <div class="warning">
@@ -90,52 +85,8 @@
         </div>
     </div>
   <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9260422,document.createElement('script'))</script>
-     <script>
-      // بعد 10 ثواني، نحوله للفيديو
-      setTimeout(() => {
-        window.location.href = "toonary://playVideo";
-      }, 5000);
-    </script>
+   
 
-   <script>
-        const countdownElement = document.getElementById('countdown');
-        const countdownContainer = document.querySelector('.countdown-container');
-        const countdownCircle = document.querySelector('.countdown-circle');
-        const messageElement = document.getElementById('message');
-        let timeLeft = 5;
-        
-        function updateCountdown() {
-            countdownElement.textContent = timeLeft;
-            timeLeft--;
-            
-            if (timeLeft < 0) {
-                clearInterval(countdownInterval);
-                countdownElement.textContent = '0';
-                
-                // إخفاء العداد بعد نصف ثانية من الوصول إلى الصفر
-                setTimeout(() => {
-                    countdownContainer.style.opacity = '0';
-                    countdownContainer.style.transform = 'scale(0.5)';
-                    
-                    // إظهار الرسالة بعد اختفاء العداد
-                    setTimeout(() => {
-                        messageElement.style.opacity = '1';
-                        document.body.style.backgroundColor = '#e8f5e9';
-                    }, 500);
-                    
-                    // إزالة العداد من DOM بعد انتهاء الانتقال
-                    setTimeout(() => {
-                        countdownContainer.style.display = 'none';
-                    }, 1000);
-                }, 500);
-            }
-        }
-        
-        // تحديث العداد كل ثانية
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        
-        // تشغيل الدالة فوراً لبدء العد من 5 دون انتظار الثانية الأولى
-        updateCountdown();
-    </script>
+  
 </body>
 </html>
